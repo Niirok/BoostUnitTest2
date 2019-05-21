@@ -25,7 +25,9 @@ before_build:
 
 - cmd: nuget restore
 
-  choco install codecov
+- cmd: choco install codecov
+
+  
 
 build:
 
