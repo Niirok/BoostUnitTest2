@@ -66,6 +66,8 @@ on_finish:
 
     cat C:\projects\boostunittest2\ConvertedReport.xml
 
+    python -m pip install --upgrade pip
+
     pip install codecov
     
     $codecov_cmd = '& codecov -f .\ConvertedReport.xml -X gcov'
