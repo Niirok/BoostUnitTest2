@@ -71,6 +71,6 @@ on_finish:
 
     pip install codecov
     
-    $codecov_cmd = '& -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov'
+    $codecov_cmd = '& codecov -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov'
     
     Invoke-Expression $codecov_cmd
