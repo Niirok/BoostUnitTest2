@@ -68,4 +68,4 @@ on_finish:
     C:\projects\boostunittest2\dep\VisualCoverage\VisualCoverage.exe -i $testReport --clover C:\projects\boostunittest2\ConvertedReport.xml --exclude-namespace boost --exclude-file BoostUnitTest*.*
 
     
-    codecov -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov   
+    codecov -f C:\projects\boostunittest2\ConvertedReport.xml   
