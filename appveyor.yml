@@ -25,6 +25,8 @@ before_build:
 
 - cmd: nuget restore
 
+  choco install codecov
+
 build:
 
   project: C:\projects\boostunittest2\BoostUnitTest2.sln
@@ -63,6 +65,5 @@ on_finish:
 
     C:\projects\boostunittest2\dep\VisualCoverage\VisualCoverage.exe -i $testReport --clover C:\projects\boostunittest2\ConvertedReport.xml --exclude-namespace boost --exclude-file BoostUnitTest*.*
 
-    choco install codecov
     
-    .\codecov.exe -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov   
+    - codecov -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov   
