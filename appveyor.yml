@@ -63,12 +63,6 @@ on_finish:
 
     C:\projects\boostunittest2\dep\VisualCoverage\VisualCoverage.exe -i $testReport --clover C:\projects\boostunittest2\ConvertedReport.xml --exclude-namespace boost --exclude-file BoostUnitTest*.*
 
-    "SET PATH=C:\\Python37;C:\\Python37\\Scripts;%PATH%"
-
-    python -m pip install --upgrade pip
-
-    pip install codecov
+    choco install codecov
     
-    $codecov_cmd = '& codecov -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov'
-    
-    Invoke-Expression $codecov_cmd
+    .\codecov.exe -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov   
