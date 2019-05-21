@@ -66,11 +66,8 @@ on_finish:
 
     cat C:\projects\boostunittest2\ConvertedReport.xml
 
-
-    #"SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
-
     pip install codecov
     
-    $codecov_cmd = '& codecov -f C:\projects\boostunittest2\ConvertedReport.xml -X gcov'
+    $codecov_cmd = '& codecov -f .\ConvertedReport.xml -X gcov'
     
     Invoke-Expression $codecov_cmd
